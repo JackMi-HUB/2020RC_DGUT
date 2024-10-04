@@ -243,8 +243,8 @@ class Point_Move:
         tck, u = interpolate.splprep([x, y], k=3, s=10)
         u = np.linspace(0, 1, num=100, endpoint=True)
         out1 = interpolate.splev(u, tck)
-        file = open('2.txt', mode='w')
-        np.savetxt('2.txt', out1, fmt='%d', delimiter=',')
+        file = open('path.txt', mode='w')
+        np.savetxt('path.txt', out1, fmt='%d', delimiter=',')
         # B样条曲线地图绘制
         plt.plot(x, y, 'ro', out1[0], out1[1], 'b')
 
